@@ -1,3 +1,7 @@
+Merhaba görevleri elimden geldiğinde tamamladım umarım talep ettiğiniz şekilde yapabilmişimdir. 
+
+JWT için " tymon/jwt-auth " kütüphanesi
+WebHook için " spatie/laravel-webhook-client " kütüphanesi
 
 ## API Kullanımı
 
@@ -8,10 +12,10 @@
 ```
 Kullanıcı giriş yapabileceği API geriye JWT Token döner ve diğer tüm işlerde bu JWT token'un HEADER'da gönderilmesi gerekmektedir.
 
-| Parametre | Tip     | Açıklama                |
-| :-------- | :------- | :------------------------- |
-| `email`   |   `string` | **Gerekli**. Eposta adresiniz. |
-| `password` |  `string` |   **Gerekli**. Şifreniz. |
+| Parametre     | Tip       | Açıklama                              | Varsayılan        |
+| :--------     | :-------  | :---------------------------------    | :---------------- |
+| `email`       | `string`  | **Gerekli**. Eposta adresiniz.        | example1@test.com |
+| `password`    | `string`  | **Gerekli**. Şifreniz.                | 123               |
 
 
 #### Çıkış Yap
@@ -105,6 +109,20 @@ Gerekli paketleri yükleyin
 
 ```bash
   composer install
+```
+
+Veritabanını yükleyin
+
+```bash
+  php artisan migrate:install
+  php artisan migrate:refresh
+```
+
+Veritabanını yükleyin
+
+```bash
+  php artisan migrate:install
+  php artisan migrate:refresh
 ```
 
 Önbellekleri Alın
